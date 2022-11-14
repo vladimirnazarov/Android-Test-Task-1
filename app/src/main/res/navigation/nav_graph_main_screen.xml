@@ -3,9 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_host_fragment"
     app:startDestination="@id/startFragment">
-
     <fragment
         android:id="@+id/startFragment"
         android:name="com.vnazarov.testandroid1.StartFragment"
-        android:label="StartFragment" />
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.vnazarov.testandroid1.SecondFragment"
+        android:label="SecondFragment" >
+        <action
+            android:id="@+id/action_secondFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 </navigation>
